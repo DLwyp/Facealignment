@@ -1,0 +1,42 @@
+进入docker环境
+sudo NV_GPU=0 nvidia-docker run -it --name='wyp_gpu_0' -v /raid/sdb/wyp:/mnt pytorch/pytorch:latest
+
+
+K80密码：
+192.168.0.23
+Vfast123.+
+
+
+看docker镜像：
+sudo docker images
+
+
+正在运行的docker
+sudo docker ps
+
+
+删除docker
+sudo docker rmi ID
+
+再次进入docker
+sudo docker exec -it e30d41e3cd70 /bin/bash
+
+sudo docker attach e30d41e3cd70
+ctrl c
+
+本机目录
+raid/sdb/wyp
+
+从网上拉docer image
+在docker环境外，sudo docker search 加搜索内容，docker pull 加名字
+
+
+保存docker
+docker commit 
+
+关掉docker（如果不保存，会丢失配置好的环境）
+sudo docker kill ID
+
+docker另存为一个image
+sudo docker commit ID 新名字：缩写（只能小写）
+
